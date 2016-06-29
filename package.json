@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "start": "gulp -w",
-    "build": "gulp",
+    "build": "gulp"
   },
   "author": "wechat ui team",
   "repository": {
@@ -53,17 +53,18 @@
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "koa-views": "^4.1.0",
+    "sails-mongo": "^0.11.5",
+    "sails-mysql": "^0.11.5",
     "socket.io": "^1.4.6",
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "^1.4.6",
+    "waterline": "^0.10.28"
   },
   "browserify": {
     "transform": [
       "browserify-shim"
     ]
   },
-  "browser": {
-    
-  },
+  "browser": {},
   "browserify-shim": {
     "jquery": "global:jQuery"
   }

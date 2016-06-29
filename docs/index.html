@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件地图</title>
+    <link rel="stylesheet" href="lib/style/index.css"/>
+    <link rel="stylesheet" href="lib/card/style/index.css"/>
+    <link rel="stylesheet" href="lib/menu/style/index.css"/>
+    <link rel="stylesheet" href="lib/layout/style/index.css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style type="text/css">
+        html, body, #yh-layout {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #yh-layout {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        header {
+            height: 55px;
+            background-color: #23b7e5;
+        }
+
+        header .logo {
+            font-size: 25px;
+            color: #FFFFFF;
+            line-height: 55px;
+            margin-left: 50px;
+        }
+
+        #aside {
+            position: absolute;
+            width: 220px;
+            top: 55px;
+            left: 0;
+            bottom: 0;
+            z-index: 116;
+            background-color: #fff;
+            padding-bottom: 20px;
+            border-right: 1px solid #e9e9e9;
+            /*overflow-x: hidden;*/
+        }
+
+        .ant-card{
+            margin-bottom: 20px;;
+        }
+        #aside li {
+            cursor: pointer;;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 20px 40px;
+        }
+
+        #loading {
+            text-align: center;
+            margin-top: 100px;
+        }
+        main h2,main h3 {
+            margin: 20px 0;
+        }
+        main h4 {
+            margin: 16px 0;
+            font-size: 14px;
+            line-height: 1;
+            font-weight: normal;
+        }
+        main p.tit{
+            margin: 10px 0;
+        }
+        main p.describe{
+            margin: 20px 0;
+        }
+        .code-box{
+            position: relative;
+            padding: 16px;
+            margin-top: 20px;;
+            border-radius: 0 0 6px 6px;
+            -webkit-transition: background-color .4s ease;
+            transition: background-color .4s ease;
+            width: 100%;
+            font-size: 12px;
+            background: #fbfbfb;
+        }
+        .code-body{
+            display: none;
+        }
+        .code-box .collapse {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            font-size: 18px;
+            line-height: 18px;
+            opacity: .5;
+            text-align: center;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            color: #999;
+            background: #fff;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border-radius: 100%;
+        }
+        pre code {
+            display: block;
+            background: #fff;
+            color: #666;
+            line-height: 1.7;
+            border: 1px solid #e9e9e9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        .code-box-title {
+            position: absolute;
+            top: -14px;
+            padding: 1px 1.1em;
+            color: #777;
+            border-radius: 6px;
+            background: #fbfbfb;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            box-shadow: 0 -1.2px 0 #e9e9e9;
+        }
+        .code-box-title:before {
+            font-family: anticon;
+            content: "\E658";
+            font-size: 16px;
+            vertical-align: middle;
+            line-height: 22px;
+            position: relative;
+            margin-right: 8px;
+            top: -2px;
+            color: #ccc;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            display: inline-block;
+        }
+        .ant-menu-item-group .ant-menu-item{
+            padding-left: 48px;
+        }
+        .aside-container .chinese {
+            font-size: 12px;
+            margin-left: 6px;
+            font-weight: 400;
+            opacity: .67;
+        }
+    </style>
+</head>
+<body>
+<div id="yh-layout">
+    <header>
+        <div class="logo">title</div>
+    </header>
+    <div id="aside">
+        <ul class="ant-menu ant-menu-inline aside-container ant-menu-light ant-menu-root" role="menu">
+            <li class="ant-menu-item"  style="padding-left: 24px;"><a
+                    href="/docs/react/introduce">这里是框架名字</a></li>
+            <li class="ant-menu-item"  style="padding-left: 24px;"><a
+                    href="/docs/react/getting-started">快速上手</a></li>
+            <li class="ant-menu-item"  style="padding-left: 24px;"><a
+                    href="/changelog">更新日志</a></li>
+            <li class="ant-menu-item"  style="padding-left: 24px;"><a
+                    href="/docs/react/upgrade-notes">升级指南</a></li>
+            <li class="ant-menu-submenu-inline ant-menu-submenu-open ant-menu-submenu">
+                <div class="ant-menu-submenu-title" style="padding-left: 24px;"><h4>Components</h4></div>
+                <ul class="ant-menu ant-menu-inline  ant-menu-sub">
+                    <li class=" ant-menu-item-group">
+                        <div class="ant-menu-item-group-title">Basic</div>
+                        <ul class="ant-menu-item-group-list">
+                            <li class="ant-menu-item">
+                                <a href="#button"><span>Button</span><span class="chinese">按钮</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="#icon"><span>Icon</span><span class="chinese">图标</span></a></li>
+                            <li class="ant-menu-item">
+                                <a href="#layout"><span>Layout</span><span class="chinese">布局</span></a></li>
+                        </ul>
+                    </li>
+                    <li class=" ant-menu-item-group">
+                        <div class="ant-menu-item-group-title">Form Controls</div>
+                        <ul class="ant-menu-item-group-list">
+                            <li class="ant-menu-item">
+                                <a href="#checkbox"><span>Checkbox</span><span class="chinese">多选框</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="#cascader"><span>Cascader</span><span class="chinese">级联选择</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="lib/button/button.html"><span>DatePicker</span><span class="chinese">日期选择框</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="lib/button/button.html"><span>Form</span><span class="chinese">表单</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="lib/button/button.html"><span>InputNumber</span><span class="chinese">数字输入框</span></a>
+                            </li>
+                            <li class="ant-menu-item">
+                                <a href="lib/button/button.html"><span>Input</span><span class="chinese">输入框</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <main id="article">
+
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    //获取页面渲染到article框内
+    function getpage(uri){
+        $("#article").html('<div id="loading"><i class=" anticon anticon-loading"></i>&nbsp;加载中...</div>');
+        $.ajax({
+            type: 'GET',
+            url: 'lib/'+uri+'/'+uri+'.html',
+            success: function (data) {
+                setTimeout(function () {
+                    $("#article").html(data);
+                }, 500);
+            }
+        });
+    }
+    if(location.hash){
+        var hash = location.hash.substring(1);
+        getpage(hash);
+    }else{
+        getpage('button');
+    }
+    $("#aside").on('click', 'a', function (e) {
+//        if (e && e.preventDefault) {
+//            e.preventDefault();
+//        } else {
+//            window.event.returnValue = false;
+//            return false;
+//        }
+        window.scrollTo(0,0);
+        var uri = this.getAttribute('href').substring(1);
+        getpage(uri);
+    });
+
+
+
+</script>
+</html>
