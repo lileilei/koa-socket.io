@@ -92,7 +92,7 @@
           transform: rotate(180deg);
 }
 .ant-cascader-menus {
-  font-size: 12px;
+  font-size: 0px;
   background: #fff;
   position: absolute;
   z-index: 1050;
@@ -146,6 +146,7 @@
   border-radius: 6px;
 }
 .ant-cascader-menu-item {
+  font-size: 12px;
   padding: 7px 16px;
   cursor: pointer;
   white-space: nowrap;
