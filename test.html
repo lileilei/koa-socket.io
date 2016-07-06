@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        div{
-            width: 25%;
-            height: 300px;
-            display: inline-block;
-        }
-    </style>
 </head>
-<body style="font-size: 0">
-<div style="background: gold">1</div>
-<div style="background: red">2</div>
-<div style="background: blue">3</div>
-<div style="background: rebeccapurple">4</div>
-<div  style="background: bisque">5</div>
+<body>
+<div>
+    <p>你好，<span id='nickName'>xxx</span></p>
+    <input id="introduce" />
+</div>　　　
 </body>
+<script>
+    var userInfo = {};
+    Object.defineProperty(userInfo, "nickName", {
+        get: function(){
+            return document.getElementById('nickName').innerHTML;
+        },
+        set: function(nick){
+            document.getElementById('nickName').innerHTML = nick;
+        }
+    });
+
+    document.getElementById('introduce').addEventListener('input',function(){
+        userInfo.nickName = this.value;
+    })
+</script>
 </html>
