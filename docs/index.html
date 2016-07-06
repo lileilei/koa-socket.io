@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="lib/card/style/index.css"/>
     <link rel="stylesheet" href="lib/menu/style/index.css"/>
     <link rel="stylesheet" href="lib/layout/style/index.css"/>
+    <script type="text/javascript" src="../node_modules/vue/dist/vue.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
     <style type="text/css">
         html, body, #yh-layout {
@@ -72,7 +73,9 @@
             font-weight: normal;
         }
         main p.tit{
-            margin: 10px 0;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #999;;
         }
         main p.describe{
             margin: 20px 0;
@@ -158,6 +161,13 @@
             font-weight: 400;
             opacity: .67;
         }
+
+        .space{
+            margin: 20px 0;
+            border-color:transparent;
+            clear: both;
+
+        }
     </style>
 </head>
 <body>
@@ -168,7 +178,7 @@
     <div id="aside">
         <ul class="ant-menu ant-menu-inline aside-container ant-menu-light ant-menu-root" role="menu">
             <li class="ant-menu-item"  style="padding-left: 24px;"><a
-                    href="/docs/react/introduce">这里是框架名字</a></li>
+                    href="/docs/react/introduce">Ant Design of Vue</a></li>
             <li class="ant-menu-item"  style="padding-left: 24px;"><a
                     href="/docs/react/getting-started">快速上手</a></li>
             <li class="ant-menu-item"  style="padding-left: 24px;"><a
@@ -206,37 +216,37 @@
                                 <a href="#form"><span>Form</span><span class="chinese">表单</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>InputNumber</span><span class="chinese">数字输入框</span></a>
+                                <a href="#input-number"><span>InputNumber</span><span class="chinese">数字输入框</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Input</span><span class="chinese">输入框</span></a>
+                                <a href="#input"><span>Input</span><span class="chinese">输入框</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Radio</span><span class="chinese">单选框</span></a>
+                                <a href="#radio"><span>Radio</span><span class="chinese">单选框</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Rate</span><span class="chinese">评分</span></a>
+                                <a href="#rate"><span>Rate</span><span class="chinese">评分</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Select</span><span class="chinese">选择器</span></a>
+                                <a href="#select"><span>Select</span><span class="chinese">选择器</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Slider</span><span class="chinese">滑动输入条</span></a>
+                                <a href="#slider"><span>Slider</span><span class="chinese">滑动输入条</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Switch</span><span class="chinese">开关</span></a>
+                                <a href="#switch"><span>Switch</span><span class="chinese">开关</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>TreeSelect</span><span class="chinese">树选择</span></a>
+                                <a href="#treeselect"><span>TreeSelect</span><span class="chinese">树选择</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>TimePicker</span><span class="chinese">时间选择框</span></a>
+                                <a href="#timepicker"><span>TimePicker</span><span class="chinese">时间选择框</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Transfer</span><span class="chinese">穿梭框</span></a>
+                                <a href="transfer"><span>Transfer</span><span class="chinese">穿梭框</span></a>
                             </li>
                             <li class="ant-menu-item">
-                                <a href="lib/button/button.html"><span>Upload</span><span class="chinese">上传</span></a>
+                                <a href="upload"><span>Upload</span><span class="chinese">上传</span></a>
                             </li>
                             <li class=" ant-menu-item-group">
                                 <div class="ant-menu-item-group-title">Views</div>
